@@ -20,7 +20,7 @@ namespace Exercise.Ui.Console
 
             foreach (var key in keys)
             {
-                System.Console.WriteLine(key);
+                System.Console.WriteLine("{0} : {1}", key.Word, key.Count);
             }
 
             System.Console.ReadKey();

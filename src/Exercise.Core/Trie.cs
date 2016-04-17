@@ -44,20 +44,20 @@ namespace Exercise.Core
             return x;
         }
 
-        public IEnumerable<string> Keys
+        public IEnumerable<Quant> Keys
         {
             get
             {
-                IList<string> keys = new List<string>();
+                IList<Quant> keys = new List<Quant>();
                 Collect(_root, new StringBuilder(), keys);
                 return keys;
             }
         }
 
-        private void Collect(Node x, StringBuilder word, IList<string> keys)
+        private void Collect(Node x, StringBuilder word, IList<Quant> keys)
         {
             if (x == null) { return; }
-            if (x.Count > 0) { keys.Add(word.ToString()); }
+            if (x.Count > 0) { keys.Add(new Quant(word.ToString(), x.Count)); }
             for (int i = 0; i < R; i++)
             {
                 char c = CharByArrayIndex(i);
