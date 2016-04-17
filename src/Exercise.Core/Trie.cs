@@ -18,7 +18,6 @@ namespace Exercise.Core
             return (char) i;
         }
 
-        // R-way trie node
         private class Node
         {
             public readonly Node[] Next = new Node[R];
