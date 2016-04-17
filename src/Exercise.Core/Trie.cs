@@ -7,16 +7,15 @@ namespace Exercise.Core
     {
         private const int R = 256;  // extended ASCII
         private Node _root;
-
-
+        
         private int ArrayIndexByChar(char c)
         {
-            return c - 'a';
+            return c - ((char) 0);
         }
 
         private char CharByArrayIndex(int i)
         {
-            return (char) ('a' + i);
+            return (char) i;
         }
 
         // R-way trie node
